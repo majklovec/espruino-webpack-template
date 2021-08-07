@@ -1,0 +1,26 @@
+{
+  "name": "espruino-webpack",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "webpack --mode production",
+    "upload": "yarn build && espruino -v -m --storage .bootcde:- -b 115200 -p /dev/ttyUSB0 --no-ble dist/espruino.bundle.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "7.14.6",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@babel/plugin-proposal-optional-chaining": "7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-destructuring": "7.14.7",
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/runtime-corejs3": "7.14.7",
+    "babel-loader": "8.2.2",
+    "espruino": "^0.1.38",
+    "babel-plugin-espruino-require": "./babel-plugin-espruino-require/",
+    "terser-webpack-plugin": "^5.1.4",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  }
+}

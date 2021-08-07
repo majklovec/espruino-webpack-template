@@ -1,0 +1,26 @@
+{
+   "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-optional-chaining",
+      "@babel/plugin-transform-destructuring",
+      "@babel/plugin-proposal-object-rest-spread",
+      "espruino-require"
+   ],
+   "presets": [
+      [
+         "@babel/preset-env",
+         {
+            "loose": false,
+            "useBuiltIns": false,
+            "shippedProposals": true,
+            "debug": false,
+            "targets": {
+               "browsers": [
+                  "last 50 versions",
+                  "safari < 6"
+               ]
+            }
+         }
+      ]
+   ]
+}
